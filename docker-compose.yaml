@@ -29,7 +29,7 @@ services:
       - sh
       - -c
       - |
-        composer --ignore-platform-reqs create-project laravel/laravel /var/www/laravel
+        composer --ignore-platform-reqs create-project laravel/laravel $PROJECT_NAME
         addgroup -g $GID $GROUPNAME
         adduser -D -g '' -h /home/$GROUPNAME -G $GROUPNAME -u $UID $USER
         chown -R $USER:$USER /var/www/laravel
